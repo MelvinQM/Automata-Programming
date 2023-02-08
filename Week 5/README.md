@@ -1,3 +1,0 @@
-# ![alt text](assets/pictures/)
-
-
