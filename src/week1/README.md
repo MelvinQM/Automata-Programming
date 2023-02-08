@@ -1,9 +1,24 @@
+# Automata & Programming 2023
+## Week 1 fsaExec Method & Regex | Melvin Moes 500905603
 
-## Dit is de readme voor week 1
+## De 2D Array and the fsaExec Method
+What the code does is it receives an input in the form of a string then it takes the ASCII
+values of each char and uses these to go through the states starting at default state 0 the boolean array basically says
+that if you end on state 3 you are provided with a true.
 
-Geef hier antwoord op de vragen van week 1 en leg uit hoe je programma werkt.
+To call a 2D array you need to fill in both indexes [a][b]
+'a' stands for which group you want to select from 'b'
+stands for which value you want from this group.
 
-### Aantekeningen
+### State diagram fsaExec code
+![alt text](assets/images/week1states.png)
+
+### Regex
+
+### State diagram Regex code
+
+
+### Aantekeningen "IN PARTIAL DUTCH"
 - **CPU** = State machine
 - **Memory/Registers** = State
 - **Instruction/Cycle** = Transition
@@ -17,21 +32,3 @@ DEA = In elke staat alle inputs gedefinieerd (deterministic)
 NEA = Niet gedefineerde of dubbele overgangen toegestaan
 
 NEA kost meestal minder werk.
-
-## De 2D Array en de fsaExec Method
-```java
-public static void fsaExec(String input) {
-    boolean[] acceptState = {false, false, false, true};
-    
-    // Two dimensional array
-    int[][] followUpAlphabetStates = {
-        {0, 1} //state [0] (fStates[[0]['a'] = 0 en [0]['b']=1 enz
-        {0, 2} //state [1]
-        {0, 3} //state [2]
-        {3, 3} //state [3]
-    } 
-    /*  To call this variabel you need to fill in both indexes [a][b]
-        a stands for which group you want to select from b 
-        stands for which value you want from this group.    */
-}
-```

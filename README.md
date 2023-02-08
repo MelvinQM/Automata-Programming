@@ -88,4 +88,4 @@ Screenshots kun je copy+paste plaatsen vanuit intellij, bijvoorbeeld uit FLACI.C
 
 De IDE maakt er een png plaatje van dat je ook kunt committen naar je repo. Eventueel de map wijzigen.
 
-![img.png](./images/img.png)
+![img.png](./assets/images/img.png)
