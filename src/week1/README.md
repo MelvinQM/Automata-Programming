@@ -43,9 +43,6 @@ the rest of the code: [Regex Code](./MailChecker.java)
 ![alt text](assets/images/regexcheatsheet2.png)
 ![alt text](assets/images/regexcheatsheet3.png)
 
-### State diagram Regex code
-
-
 ### Aantekeningen
 - **CPU** = State machine
 - **Memory/Registers** = State
