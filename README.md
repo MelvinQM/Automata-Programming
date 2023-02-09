@@ -1,5 +1,5 @@
 # Automata & Programming 2023.1
-
+![alt text](assets/images/kopje.png)
 Uitwerking van het practicum, toelichting en antwoorden.
 
 Wijzig dit document, verwijs naar de verslagen in week1 t/m week5

@@ -5,7 +5,6 @@ Melvin Moes 500905603
 FSAexec state checker
  */
 public class FSAexec {
-
     public static void main(String[] args) {
         // TODO: fix it and test with 4 extra examples
         System.out.println("Made by: Melvin Moes 500905603");
@@ -32,7 +31,7 @@ public class FSAexec {
             char inchar = input.charAt(i);         // Which char it's checking right now
             int incharIndex = inchar - 'a';        // Checking the ASCII value of the char being checked
             System.out.printf("Current State: %d | Current Char: %c(%d) | ", state, inchar, incharIndex);
-            state = tranTab[state][incharIndex];   // Taking the value of state(first iteration its 0) and the ASCII value of the char being checked
+            state = tranTab[state][incharIndex];   // Taking the value of state(first iteration = 0) and the ASCII value of the char being checked
             System.out.printf("Heading to State: %d\n", state);
         }
         System.out.printf("The final transition is: %b\n\n", acceptState[state]);

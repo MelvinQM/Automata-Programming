@@ -1,4 +1,5 @@
 # Automata & Programming 2023
+![alt text](assets/images/kopje.png)
 ## Week 1 fsaExec Method & Regex | Melvin Moes 500905603
 
 ## De 2D Array and the fsaExec Method
