@@ -1,6 +1,6 @@
-package week4.machine1;
+package week4.machine2;
 
-public class StateT extends State{
+public class StateT extends State {
     public StateT(Machine machine) {
         super(machine);
     }

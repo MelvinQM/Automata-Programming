@@ -1,6 +1,6 @@
-package week4.machine1;
+package week4.machine2;
 
-public class StateS extends State{
+public class StateS extends State {
     //Constructor to make sure when an object is created the machine used is provided
     public StateS(Machine machine) {
         super(machine);

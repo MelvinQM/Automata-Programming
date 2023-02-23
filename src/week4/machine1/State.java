@@ -1,7 +1,6 @@
 package week4.machine1;
 
 public class State implements IState{
-
     protected Machine machine;
 
     public State(Machine machine) {

@@ -1,7 +1,10 @@
 ![alt text](assets/images/kopje.png)
 # Dit is de readme voor week 4
+Het verschil tussen een Interface en een superklasse is dat een interface altijd
+abstract is en geen body nodig heeft. Als jij bijvoorbeeld states wilt returnen
+zou je met een super klasse een return null moeten geven omdat er een  body moet zijn.
+Dit hoeft niet bij de interface.
 
-Schrijf je verslag voor week 4 (en week 3 roostervrij)
 Hier is de plantuml te zien van mijn statemachine ik heb meteen
 een interface gebruikt met daarnaast nog een super klasse die functie mee kan geven
 dit zorgt voor minder herhaling van code in de verschillende states. Ik vind dit persoonlijk
@@ -134,3 +137,4 @@ StateT       -[#000082,plain]-^  State
 @enduml
 ```
 State T toevoegen was aardig simpel naast een paar kleine veranderingen
+![alt text](assets/images/week3states.png)

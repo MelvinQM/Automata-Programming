@@ -1,4 +1,4 @@
-package week4.machine1;
+package week4.machine2;
 
 public class Machine {
     //Creating empty states to fill with the state objects below so multiple objects are not required.
