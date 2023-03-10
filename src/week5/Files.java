@@ -1,19 +1,22 @@
 package week5;
-import week4.machine1.Machine;
+import week2.huisdier.Pet;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Files {
-    private String fileName;
+    private File path;
+    //Object constructor create the file if not already created
     public Files(String fileName){
-        this.fileName = fileName;
         try {
-            File file = new java.io.File("src\\week5\\" + fileName);
-            if (file.createNewFile()) {
-                System.out.println("Bestand aangemaakt, genaamd: " + file.getName());
+            path = new java.io.File("src\\week5\\" + fileName);
+            if (path.createNewFile()) {
+                System.out.println("Bestand aangemaakt, genaamd: " + path.getName());
             } else {
                 System.out.println("Bestand bestaat al.");
             }
@@ -22,24 +25,17 @@ public class Files {
             e.printStackTrace();
         }
     }
-//    public void create(){
-//        try {
-//            File file = new java.io.File("src\\week5\\" + fileName);
-//            if (file.createNewFile()) {
-//                System.out.println("Bestand aangemaakt, genaamd: " + file.getName());
-//            } else {
-//                System.out.println("Bestand bestaat al.");
-//            }
-//        } catch (IOException e) {
-//            System.out.println("Er ging wat mis...");
-//            e.printStackTrace();
-//        }
-//    }
-    public void add(){}
-    public void delete(){}
-    public void edit(){}
-    public void read(){
-        Scanner scanner = new Scanner(file);
+    //Function to insert data into file
+    public void insertData(ArrayList<Pet> pets) throws FileNotFoundException {
+        PrintWriter pw = new PrintWriter(path);
+
+        for(Pet pet : pets){
+            pw.printf("%s", pets.getClass());
+        }
+        pw.close();
+    }
+    public void readData() throws FileNotFoundException {
+        Scanner scanner = new Scanner(path);
         while(scanner.hasNext()) { // Doorloop het bestand
             String tekstRegel = scanner.nextLine(); // Haal er één regel uit.
             System.out.println(tekstRegel); // Print deze regel.
