@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -36,17 +35,16 @@ public class Files {
     }
     public void readData() throws FileNotFoundException {
         Scanner scanner = new Scanner(path);
-        while(scanner.hasNext()) { // Doorloop het bestand
-            String tekstRegel = scanner.nextLine(); // Haal er één regel uit.
-            System.out.println(tekstRegel); // Print deze regel.
+        while(scanner.hasNext()) {                  // Scan through the file
+            String tekstRegel = scanner.nextLine(); // Get one line from the file
+            System.out.println(tekstRegel);    // Print this line
         }
-
+        System.out.println("--------End of file--------");
     }
     public void addPet(String animalName, String name, ArrayList<Pet> pets) throws InterruptedException {
         switch (animalName){
             case "Dog":
                 pets.add(new Dog(name));
-                pets.get(pets.size() - 1);
                 break;
             case "Cat":
                 pets.add(new Cat(name));
@@ -61,34 +59,15 @@ public class Files {
                 pets.add(new Tiger(name));
                 break;
             default:
-                System.out.println("Error");
+                System.out.println("Error Wrong input");
 
         }
         System.out.printf("%s the %s created! Make sure to save your changes!\n\n", name, animalName);
         Thread.sleep(1000);
     }
-    public void deletePet(String animalName, String name, ArrayList<Pet> pets) throws InterruptedException {
-        switch (animalName){
-            case "Dog":
-                pets.remove(name);
-                break;
-            case "Cat":
-                pets.remove(new Cat(name));
-                break;
-            case "Chihuahua":
-                pets.remove(new Chihuahua(name));
-                break;
-            case "Poodle":
-                pets.remove(new Poodle(name));
-                break;
-            case "Tiger":
-                pets.remove(new Tiger(name));
-                break;
-            default:
-                System.out.println("Error");
-
-        }
-        System.out.printf("%s the %s deleted! Make sure to save your changes!\n\n", name, animalName);
+    public void clearFile(ArrayList<Pet> pets) throws InterruptedException {
+        pets.clear();
+        System.out.println("File cleared! Make sure to save your changes!\n");
         Thread.sleep(1000);
     }
 }

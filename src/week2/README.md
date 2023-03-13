@@ -23,8 +23,8 @@ class Auto {
 + Print(): void
 + Honk(): void
   }
-  class Main {
-+ Main():
+  class week5.singleton.Main {
++ week5.singleton.Main():
 + main(String[]): void
   }
 

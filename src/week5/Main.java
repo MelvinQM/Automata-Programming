@@ -7,25 +7,26 @@ import week2.huisdier.Pet;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/*
+Melvin Moes 500905603
+13-03-2023
+Huisdier object Arraylist file management
+ */
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, InterruptedException {
         Files file = new Files("bestand.txt");
         Scanner s = new Scanner(System.in);
         //Making an Arraylist of pet objects
         ArrayList<Pet> pets = new ArrayList<>();
-            pets.add(new Dog("Karel"));
-            pets.add(new Cat("Cerel"));
 
         String name;
         String animalName;
         while(true){
             System.out.println("Choose between these options:");
-            System.out.println("Choose 1 to add a Pet to the file");
-            System.out.println("Choose 2 to edit a Pet from the file");
-            System.out.println("Choose 3 to delete a pet from the file");
-            System.out.println("Choose R to read the file");
-            System.out.println("Choose S to save the file");
+            System.out.println("1. to add a Pet to the file");
+            System.out.println("2. to delete EVERY Pet from the file");
+            System.out.println("R. to read the file");
+            System.out.println("S. to save the file");
             char option = s.next().charAt(0);
             switch (option){
                 //Add
@@ -37,17 +38,9 @@ public class Main {
                     name = s.next();
                     file.addPet(animalName, name, pets);
                     break;
-                //Edit
-                case '2':
-                    break;
                 //Delete
-                case '3':
-                    System.out.println("Choose an animal from this list to delete(Cat, Dog, Poodle, Chihuahua, Tiger)");
-                    System.out.print("My animal is a: ");
-                    animalName = s.next();
-                    System.out.print("What is his or her name:");
-                    name = s.next();
-                    file.deletePet(animalName, name, pets);
+                case '2':
+                    file.clearFile(pets);
                     break;
                 //Save
                 case 'S'|'s':

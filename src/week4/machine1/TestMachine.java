@@ -9,7 +9,7 @@ public class TestMachine {
         //Making a machine object that handles all the state relations
         Machine machine1 = new Machine();
 
-        //Main stateloop
+        //week5.singleton.Main stateloop
         while (true){
             //Receiving input
             System.out.println("Input only 'a' or 'b'");
