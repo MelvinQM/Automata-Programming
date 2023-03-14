@@ -3,7 +3,7 @@ package week5.singleton;
 class Aarde {
     private static Aarde instance;
 
-    Aarde(){}
+    private Aarde(){}
 
     public static Aarde getInstance(){
         if(instance == null) {

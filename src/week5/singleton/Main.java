@@ -6,9 +6,9 @@ Singleton Pattern
  */
 public class Main {
     public static void main(String[] args) {
-        Aarde a1 = new Aarde();
-        Aarde a2 = new Aarde();
-        System.out.println(a1.getInstance());
-        System.out.println(a2.getInstance());
+        Aarde a1 = Aarde.getInstance();
+        Aarde a2 = Aarde.getInstance();
+        System.out.println(a1.toString());
+        System.out.println(a2.toString());
     }
 }
