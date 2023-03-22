@@ -2,11 +2,11 @@ package Oefentoets;
 
 public class Date implements IState{
     @Override
-    public IState lp(Watch watch) {
+    public IState onLongPress(Watch watch) {
         return watch.off;
     }
     @Override
-    public IState sp(Watch watch) {
+    public IState onShortPress(Watch watch) {
         return watch.time;
     }
 }

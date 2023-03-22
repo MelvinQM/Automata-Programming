@@ -12,11 +12,11 @@ public class Watch {
         watch = this;
     }
     public void longPress(){
-        currentState = currentState.lp(this);
+        currentState = currentState.onLongPress(this);
         System.out.println("The watch is now in the " + currentState.getClass().getSimpleName() + " State.");
     }
     public void shortPress(){
-        currentState = currentState.sp(this);
+        currentState = currentState.onShortPress(this);
         System.out.println("The watch is now in the " + currentState.getClass().getSimpleName() + " State.");
     }
     public String getState(){

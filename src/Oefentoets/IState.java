@@ -1,6 +1,6 @@
 package Oefentoets;
 
 public interface IState {
-    IState lp(Watch watch);
-    IState sp(Watch watch);
+    IState onLongPress(Watch watch);
+    IState onShortPress(Watch watch);
 }
